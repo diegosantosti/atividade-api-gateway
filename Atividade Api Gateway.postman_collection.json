@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "072ffb1c-cdb2-40f6-ae45-7b40b244c5be",
+		"name": "Atividade Api Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13697938"
+	},
+	"item": [
+		{
+			"name": "/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}",
+					"host": [
+						"{{base_uri}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "os",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\" : 123 ,\r\n    \"descricao\" : \"OS INITIAL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}os",
+					"host": [
+						"{{base_uri}}os"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "os",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}os/",
+					"host": [
+						"{{base_uri}}os"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "os/{numero}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}os/123",
+					"host": [
+						"{{base_uri}}os"
+					],
+					"path": [
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "os/{numero}/equipamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"indice\" : \"1\" ,\r\n    \"descricao\" : \"Este é um equipamento 1\",\r\n    \"problema\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}os/123/equipamento",
+					"host": [
+						"{{base_uri}}os"
+					],
+					"path": [
+						"123",
+						"equipamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "os/{numero}/equipamento/{indice}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}os/123/equipamento/1",
+					"host": [
+						"{{base_uri}}os"
+					],
+					"path": [
+						"123",
+						"equipamento",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "os/{numero}/equipamento",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}os/123/equipamento",
+					"host": [
+						"{{base_uri}}os"
+					],
+					"path": [
+						"123",
+						"equipamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "os/equipamento?descricao={descricao}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_uri}}os/equipamento?descricao=2",
+					"host": [
+						"{{base_uri}}os"
+					],
+					"path": [
+						"equipamento"
+					],
+					"query": [
+						{
+							"key": "descricao",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_uri",
+			"value": "http://localhost:8000/api/v1/",
+			"type": "string"
+		}
+	]
+}
